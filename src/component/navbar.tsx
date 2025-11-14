@@ -22,7 +22,7 @@ export default function Navbar({isFixed = true}: NavbarProps){
                 <div className="justify-between border-black space-x-10 text-black  p-4"
                 >
                     <Link href="/"  className="transition duration-300 hover:cursor-pointer hover:underline hover:text-white">Home</Link>
-                    <label className="transition duration-300 hover:cursor-pointer hover:underline hover:text-white">Products</label>
+                    <Link href="../productList" className="transition duration-300 hover:cursor-pointer hover:underline hover:text-white">Products</Link>
                     <Link href="../about" className="transition duration-300 hover:cursor-pointer hover:underline hover:text-white">About</Link>
                 </div>
             </div>

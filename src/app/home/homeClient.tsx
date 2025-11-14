@@ -18,8 +18,8 @@ interface HomeProps {
 
 export default function Home(props: HomeProps) {
 
-  var [count, setCount] = useState(0);
-  var [currentIndex, setcurrentIndex] = useState(0);
+  const [count, setCount] = useState(0);
+  const [currentIndex, setcurrentIndex] = useState(0);
 
   const counting = () => {
     setCount(count + 1);
@@ -34,10 +34,6 @@ export default function Home(props: HomeProps) {
   const handlePrev = () => {
     var newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
     setcurrentIndex(newIndex);
-  }
-
-  const handleLog = (id: string) => {
-    console.log(id);
   }
 
 //   const productList = [
@@ -101,21 +97,20 @@ export default function Home(props: HomeProps) {
             </div>
           </div>
 
-          <div className="mt-8">
-            <div className="grid grid-cols-4 gap-8 hover:cursor-pointer">
-                {props.productList.map((productList) => (
-                  <Link
-                  key={productList.id}
-                  href={`/product/${productList.id}`}
-                  onClick={() => handleLog(productList.id)}
-                  >
-                    <ProductCard
-                    key={productList.id}
-                    {...productList}
-                    />
-                  </Link>
-                ))}
-            </div>
+          <div className="mt-16">
+              <div className="grid grid-cols-4 gap-8 hover:cursor-pointer">
+                  {props.productList.map((product) => (
+                    <Link
+                    key={product.id}
+                    href={`/product/${product.id}`}
+                    >
+                      <ProductCard
+                      key={product.id}
+                      {...product}
+                      />
+                    </Link>
+                  ))}
+              </div>
           </div>
 
           <div className="text-white text-9xl">

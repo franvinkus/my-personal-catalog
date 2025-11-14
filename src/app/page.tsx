@@ -1,6 +1,6 @@
 
 import { sanityClient } from "@/lib/sanityClient";
-import Home from '@/app/home/page'
+import Home from '@/app/home/homeClient'
 import { Product } from "./type/types";
 
 const productQuery = `*[_type == "product"] | order(name asc){

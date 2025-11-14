@@ -2,11 +2,10 @@
 import { useRouter } from "next/navigation";
 
 interface WhatsappOrder{
-    message: string,
     link: string,
 }
 
-export default function WhatsappButton({message, link}: WhatsappOrder){
+export default function WhatsappButton({link}: WhatsappOrder){
 
     return (
         <div className="flex items-center border-2 border-black rounded-2xl bg-green-500 p-4 h-[60px] w-[170px]">

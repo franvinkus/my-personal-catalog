@@ -24,7 +24,7 @@ export default async function ProductDetail({params}: Props){
         productQuery,
         { id: id}
     )
-    console.log(id);
+    
     if(!product){
         return(
             <div className="h-full">
@@ -38,6 +38,11 @@ export default async function ProductDetail({params}: Props){
         </div>
         )
     }
+
+    const phoneNumber = "087884296811";
+    const message = `Hello, I'm Interested in ${product.name} with the price ${product.price.toLocaleString('id-ID')}`;
+    const link = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`; 
+
 
     return (
         <div className="h-full">
@@ -54,7 +59,9 @@ export default async function ProductDetail({params}: Props){
                                 <label className="text-xl">Order Now!!</label>
 
                                 <div>
-                                    <WhatsappButton/>
+                                    <WhatsappButton
+                                    link={link}
+                                    />
                                 </div>
                             </div>
                         </div>
