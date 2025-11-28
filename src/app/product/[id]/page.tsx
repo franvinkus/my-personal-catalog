@@ -51,12 +51,12 @@ export default async function ProductDetail({params}: Props){
                     <BackButton/>
                     <div>
                         <div className="flex flex-row">
-                            <img src={product.imageUrl} style={{objectFit: "cover"}} className="h-[470px] w-[450px] rounded-2xl mr-4 border-2 border-gray-600" />
-                            <div className="flex flex-col space-y-4 p-4">
-                                <label className="text-7xl ">{product.name}</label>
-                                <label className="text-4xl">{product.details}</label>
-                                <label className="text-3xl">Rp. {product.price.toLocaleString('id-ID')}</label>
-                                <label className="text-xl">Order Now!!</label>
+                            <img src={product.imageUrl} style={{objectFit: "cover"}} className="h-120 w-110 rounded-2xl mr-4 border-2 border-gray-600" />
+                            <div className="flex flex-col grow space-y-4 p-4">
+                                <label className="text-6xl ">{product.name}</label>
+                                <label className="text-2xl line-clamp-2">{product.details}</label>
+                                <label className="text-2xl line-clamp-3">Rp. {product.price.toLocaleString('id-ID')}</label>
+                                <label className="text-xl line-clamp-4">Order Now!!</label>
 
                                 <div>
                                     <WhatsappButton

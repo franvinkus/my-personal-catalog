@@ -7,9 +7,9 @@ import { Product } from "../type/types";
 import Link from "next/link";
 
 var images = [
- "/pictures/WinnieThePoohDancingGangnam.gif",
- "/pictures/ash-baby.gif",
- "/pictures/Dancing Lizard GIF - Dancing Lizard Dancing Lizard - Discover & Share GIFs (1).gif",
+ "/pictures/artisan-of-brazil-gold.gif",
+ "/pictures/brilliance-diamond.gif",
+ "/pictures/statement-jewelry.gif",
 ];
 
 interface HomeProps {
@@ -83,7 +83,7 @@ export default function Home(props: HomeProps) {
             <div className="h-[700px] w-7xl content-center">
               <img src={images[currentIndex]} alt="Contoh" style={{objectFit: "cover"}} className="opacity-30 h-full w-full object-cover"/>
               <div className="absolute flex flex-col z-50 bottom-0 w-full items-center">
-                <label className="text-black">lorem ipsum</label>
+                <label className="text-black">enchances your aesthetic</label>
                 <div className="space-x-3">
                   {images.map((_, index) => (
                     <button
@@ -97,7 +97,7 @@ export default function Home(props: HomeProps) {
             </div>
           </div>
 
-          <div className="mt-16">
+          <div className="mt-16 p-8">
               <div className="grid grid-cols-4 gap-8 hover:cursor-pointer">
                   {props.productList.map((product) => (
                     <Link

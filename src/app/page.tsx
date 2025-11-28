@@ -3,7 +3,7 @@ import { sanityClient } from "@/lib/sanityClient";
 import Home from '@/app/home/homeClient'
 import { Product } from "./type/types";
 
-const productQuery = `*[_type == "product"] | order(name asc){
+const productQuery = `*[_type == "product"] | order(name asc)[0..3]{
     "id": _id,
     name,
     details,
